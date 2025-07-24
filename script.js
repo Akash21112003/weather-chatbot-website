@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         showTypingIndicator();
 
-        fetch('http://127.0.0.1:5000/chat', {
+        fetch('https://weather-chatbot-website.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
