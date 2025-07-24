@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         showTypingIndicator();
 
-        fetch('https://weather-chatbot-website.onrender.com', {
+        fetch('https://weather-chatbot-website.onrender.com/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -4,8 +4,10 @@ import os
 from datetime import datetime, timedelta
 import re 
 import string 
+from flask_cors import CORS 
 
 app = Flask(__name__)
+CORS(app)
 
 # --- Configuration ---
 # IMPORTANT: Replace 'YOUR_OPENWEATHERMAP_API_KEY' with your actual key
@@ -14,15 +16,7 @@ OPENWEATHERMAP_API_KEY = os.environ.get('OPENWEATHERMAP_API_KEY', 'd076515451a75
 OPENWEATHERMAP_CURRENT_WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
 OPENWEATHERMAP_FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast"
 
-# --- CORS Headers for Frontend Communication ---
-# This is crucial for allowing your frontend (running on a different "origin" like file:// or localhost:port)
-# to communicate with your backend.
-@app.after_request
-def add_cors_headers(response):
-    response.headers.add('Access-Control-Allow-Origin', '*') # Allow requests from any origin
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
-    return response
+
 
 # --- Function to Get Current Weather Data ---
 def get_current_weather_data(city_name):
