@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherBot - Your Personal Weather Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-section">
+        <div class="logo-cloud">☁</div> <h1>WeatherBot</h1>
+        <p class="tagline">Your Personal Weather Assistant</p>
+       
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message initial-greeting-message">
+                <span class="message-icon">☀</span>
+                <p>Hello! How can I assist you today?</p>
+            </div>
+            <div class="message bot-message typing-indicator" style="display: none;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Message...">
+            <button id="mic-button" class="mic-icon">🎤</button>
+            <button id="send-button" class="send-icon">▶</button>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
